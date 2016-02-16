@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+<head>
 <link>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
 <!-- Link in the bootstrap css -->
 <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
 <!-- Link in javascript -->
+    <script src="JS/home.js"></script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
@@ -33,9 +35,9 @@
                     <a href="#">About</a>
                 </li>
             </ul>
-            <form class="navbar-form navbar-right" role="search">
+            <form class="navbar-form navbar-right" method="get" role="search" name="locationForm" id="locationForm" onsubmit="return validateLocationSearch()" action="locationSearch.php">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search a Location" name="srch-term" id="srch-term">
+                    <input type="text" class="form-control" placeholder="Search a Location" id="locationSearch" name="locationSearch" id="srch-term">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit" style="padding-bottom: 7px;"><span class="glyphicon glyphicon-search"></span>
                         </button>
@@ -48,38 +50,3 @@
 
 <!-- Page content -->
 <div class="container-fluid">
-
-</div>
-
-<footer>
-    <div class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 10px">
-        <div class="container">
-            <div class="navbar-collapse collapse" id="footer-body">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">About Roadio</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Submit a Bug</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <ul class="footer-bar-btns visible-xs">
-                    <li><a href="#" class="btn" title="History"><i class="fa fa-2x fa-clock-o blue-text"></i></a></li>
-                    <li><a href="#" class="btn" title="Favourites"><i class="fa fa-2x fa-star yellow-text"></i></a></li>
-                    <li><a href="#" class="btn" title="Subscriptions"><i class="fa fa-2x fa-rss-square orange-text"></i></a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</footer>
-
-</body>
-</html>
