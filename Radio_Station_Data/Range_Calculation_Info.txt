@@ -1,4 +1,0 @@
-ERP(Effective radiated power) and HAAT (Height above average terrain) to calculate Coverage map and desired strength, 60 dBu is determined average desired for US Stations
-This also gives a minimum value with margin for error.
-16-113 km are possible ranges for broadcast.
-Field strength (For FM): Local: 60dBu, Distant: 50 dBu, Fringe 40 dBu.
