@@ -25,7 +25,6 @@
                     <li><a href="#" class="btn" title="Subscriptions"><i class="fa fa-2x fa-rss-square orange-text"></i></a></li>
                 </ul>
             </div>
-
         </div>
     </div>
 </footer>
