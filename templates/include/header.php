@@ -37,13 +37,24 @@
                     <a href="#">About</a>
                 </li>
             </ul>
-            <form class="navbar-form navbar-right" method="get" role="search" name="locationForm" id="locationForm">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search a Location" id="locationSearch" oninvalid="this.setCustomValidity('Please enter a location!')" name="locationSearch" id="srch-term" required>
-                    <div class="input-group-btn">
+            <form class="navbar-search pull-right form-inline" method="get" role="search" name="locationForm" id="locationForm" action="./?index.php">
+                <div style="color: #ffffff; margin-top: 10px;">
+                    Search Stations Near:
+                    <?php $locationHolder = "Enter a Location";
+                        if(isset($_GET['locationSearch'])) $locationHolder = $_GET['locationSearch']
+                    ?>
+                    <input type="text" class="form-control" placeholder="<?php echo $locationHolder ?>"" id="locationSearch"  name="locationSearch" required>
+                    <select class="form-control c-select" id="rangeSelect" name="rangeSelect" >
+                        <option value="100">100 miles</option>
+                        <option value="75">75 mi</option>
+                        <option value="50">50 mi</option>
+                        <option value="40">40 mi</option>
+                        <option value="30">30 mi</option>
+                        <option value="20">20 mi</option>
+                        <option value="10">10 mi</option>
+                    </select>
                         <button class="btn btn-default" type="submit" style="padding-bottom: 7px;"><span class="glyphicon glyphicon-search"></span>
                         </button>
-                    </div>
                 </div>
             </form>
         </div>

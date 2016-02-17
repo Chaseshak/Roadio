@@ -1,4 +1,4 @@
-<?php include "include/header.php" ?>
+<?php include "templates/include/header.php" ?>
 
 <!-- Begins with div class="container-fluid" from header.php -->
 <div class="jumbotron" style="background-color: #B7B7B6">
@@ -6,4 +6,4 @@
 </div>
 
 
-<?php include "include/footer.php" ?>
+<?php include "templates/include/footer.php" ?>
