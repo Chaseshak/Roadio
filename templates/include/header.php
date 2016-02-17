@@ -15,9 +15,10 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <title><?php echo $_POST['title'] ?></title>
 </head>
 
-<body style="font-family: 'Montserrat', sans-serif;">
+<body style="font-family: 'Montserrat', sans-serif; background-color: #686766">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -36,9 +37,9 @@
                     <a href="#">About</a>
                 </li>
             </ul>
-            <form class="navbar-form navbar-right" method="get" role="search" name="locationForm" id="locationForm" onsubmit="return validateLocationSearch()" action="locationSearch.php">
+            <form class="navbar-form navbar-right" method="get" role="search" name="locationForm" id="locationForm">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search a Location" id="locationSearch" name="locationSearch" id="srch-term">
+                    <input type="text" class="form-control" placeholder="Search a Location" id="locationSearch" oninvalid="this.setCustomValidity('Please enter a location!')" name="locationSearch" id="srch-term" required>
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit" style="padding-bottom: 7px;"><span class="glyphicon glyphicon-search"></span>
                         </button>
@@ -50,4 +51,4 @@
 </nav>
 
 <!-- Page content -->
-<div class="container-fluid">
+<div class="container" style="padding-top: 65px;">
