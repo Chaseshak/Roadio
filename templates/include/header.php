@@ -18,9 +18,9 @@
     <title><?php echo $_POST['title'] ?></title>
 </head>
 
-<body style="font-family: 'Montserrat', sans-serif; background-color: #686766">
+<body style="font-family: 'Montserrat', sans-serif; background-color: #202020">
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar-default navbar-fixed-top" role="navigation" style="background-color: #B81D18">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navTop">
@@ -38,7 +38,7 @@
                 </li>
             </ul>
             <form class="navbar-search pull-right form-inline" method="get" role="search" name="locationForm" id="locationForm" action="./?index.php">
-                <div style="color: #ffffff; margin-top: 10px;">
+                <div style="color: #ffffff; margin-top: 8px;">
                     Search Stations Near:
                     <?php $locationHolder = "Enter a Location";
                         if(isset($_GET['locationSearch'])) $locationHolder = $_GET['locationSearch']
