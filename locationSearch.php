@@ -14,16 +14,23 @@ include "templates/include/header.php";
 
    <!-- AIzaSyDkZuJdQ2-QEIvRr3Aal-WfEQjmCy9spFM -->
 <div class="container">
-    <p>
+
         <?php
 
             $data_arr = $_POST['data_arr'];
+            $results = $_POST['results'];
             if($data_arr){
-                echo implode("|", $data_arr);
+
+               foreach($results as $row) {
+                   ?>
+                   <p> <?php
+                   echo implode("|", $row) . "\n";
+                    ?></p> <?php
+               }
             }
 
         ?>
-    </p>
+
 </div>
 
 <?php

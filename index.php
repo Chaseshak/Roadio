@@ -6,6 +6,7 @@
  * Time: 12:45 AM
  */
 $location = isset($_GET['locationSearch']) ? $_GET['locationSearch'] : "";
+require ("config.php");
 
 if($location == ""){
     homepage();
@@ -28,9 +29,43 @@ function locationSearch($location){
     // One degree of latitude approx. equal to 69 miles
     // eqn: deg = (enteredMiles/69)
     // get the connection
+    $latitude = $data_arr[0];
+    // calc upper and lower bounds of latitude search
+    $diffLat = $_GET['rangeSelect'] / 69;
+    $upperLat = $latitude + $diffLat;
+    $lowerLat = $latitude - $diffLat;
+    $longitude = $data_arr[1];
+    $divisor = 1;
+    if($latitude < 15) $divisor = 68;
+    elseif($latitude < 25) $divisor = 65;
+    elseif($latitude < 35) $divisor = 60;
+    elseif($latitude < 45) $divisor = 53;
+    elseif($latitude < 55) $divisor = 44;
+    else $divisor =  37;
+    $diffLong = $_GET['rangeSelect'] / $divisor;
+    $upperLong = $longitude + $diffLong;
+    $lowerLong = $longitude - $diffLong;
 
-    //$conn = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
-   // $sql = "SELECT * FROM fmstations WHERE latitude BETWEEN  42 AND 44 AND longitude BETWEEN -88 AND -90";
+    $conn = new mysqli("localhost", DB_USERNAME, DB_PASSWORD, "radiodb");
+    if($conn->connect_error){
+        $_POST['results'] = "Connection error";
+    }
+    $sql = "SELECT callsign, frequency, city, state, latitude, longitude, primaryGenre FROM fmstations WHERE (latitude BETWEEN $lowerLat AND $upperLat) AND (longitude BETWEEN $lowerLong AND $upperLong)";
+
+    $result = $conn->query($sql);
+    $results = array();
+    while($row = $result->fetch_assoc()){
+        $distance = distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M");
+        if($distance < $_GET['rangeSelect']){
+            $row['distance'] = $distance;
+            $results[] = $row; // store into results array
+       }
+
+    }
+
+    $_POST['results'] = $results;
+
+
     require("locationSearch.php");
 }
 
@@ -84,6 +119,23 @@ function geocode($location){
     }
 
 
+}
+
+function distanceBetween($searchedLat, $searchedLong, $resultLat, $resultLong, $unit){
+    $theta = $searchedLong - $resultLong;
+    $dist = sin(deg2rad($searchedLat)) * sin(deg2rad($resultLat)) +  cos(deg2rad($searchedLat)) * cos(deg2rad($resultLat)) * cos(deg2rad($theta));
+    $dist = acos($dist);
+    $dist = rad2deg($dist);
+    $miles = $dist * 60 * 1.1515;
+    $unit = strtoupper($unit);
+
+    if ($unit == "K") {
+        return ($miles * 1.609344);
+    } else if ($unit == "N") {
+        return ($miles * 0.8684);
+    } else {
+        return $miles;
+    }
 }
 
 ?>
