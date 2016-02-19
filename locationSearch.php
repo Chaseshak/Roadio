@@ -17,20 +17,16 @@ include "templates/include/header.php";
 
         <?php
 
-            $data_arr = $_POST['data_arr'];
-            $results = $_POST['results'];
-            if($data_arr){
+        $data_arr = $_POST['data_arr'];
+        $results = $_POST['results'];
+        //echo implode("|", $_POST['resultsEnum'][0]); // prints one row of data
+        foreach($results as $result){
+            ?></p> <?php
+            echo implode("|", $result);
+            ?></p><?php
+        }
 
-               foreach($results as $row) {
-                   ?>
-                   <p> <?php
-                   echo implode("|", $row) . "\n";
-                    ?></p> <?php
-               }
-            }
-
-        ?>
-
+?>
 </div>
 
 <?php

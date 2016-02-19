@@ -50,7 +50,7 @@ function locationSearch($location){
     if($conn->connect_error){
         $_POST['results'] = "Connection error";
     }
-    $sql = "SELECT callsign, frequency, city, state, latitude, longitude, primaryGenre FROM fmstations WHERE (latitude BETWEEN $lowerLat AND $upperLat) AND (longitude BETWEEN $lowerLong AND $upperLong)";
+    $sql = "SELECT callsign, antClass, frequency, city, state, latitude, longitude, licensee, primaryGenre FROM fmstations WHERE (latitude BETWEEN $lowerLat AND $upperLat) AND (longitude BETWEEN $lowerLong AND $upperLong)";
 
     $result = $conn->query($sql);
     $results = array();
@@ -137,5 +137,6 @@ function distanceBetween($searchedLat, $searchedLong, $resultLat, $resultLong, $
         return $miles;
     }
 }
+
 
 ?>
