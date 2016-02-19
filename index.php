@@ -54,20 +54,113 @@ function locationSearch($location){
 
     $result = $conn->query($sql);
     $results = array();
+    $class_A = 17.6;
+    $class_C3 = 24.3;
+    $class_B1 = 27.8;
+    $class_C2 = 32.4;
+    $class_B = 40.5;
+    $class_C1 = 44.9;
+    $class_C0 = 51.8;
+    $class_C = 57.0;
+    $rangedResults[] = array();
+
     while($row = $result->fetch_assoc()){
-        $distance = distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M");
-        if($distance < $_GET['rangeSelect']){
-            $row['distance'] = $distance;
-            $results[] = $row; // store into results array
-       }
+        //$distance = distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M");
+        //if($distance < $_GET['rangeSelect']){
+            //$row['distance'] = $distance;
+        $class = $row['antClass'];
+
+        switch ($class) {
+            case 'A':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_A)
+                    $rangedResults[] = $row;
+                break;
+            case 'C3':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_C3)
+                    $rangedResults[] = $row;
+                break;
+            case 'B1':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_B1)
+                    $rangedResults[] = $row;
+                break;
+            case 'C2':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_C2)
+                    $rangedResults[] = $row;
+                break;
+            case 'B':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_B)
+                    $rangedResults[] = $row;
+                break;
+            case 'C1':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_C1)
+                    $rangedResults[] = $row;
+                break;
+            case 'C0':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_C0)
+                    $rangedResults[] = $row;
+                break;
+            case 'C':
+                if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_C)
+                    $rangedResults[] = $row;
+                break;
+            default:
+                break;
+        }
+           // $results[] = $row; // store into results array
+       //}
 
     }
 
-    $_POST['results'] = $results;
+//    $rangedResults[] = array();
+//    $class = array();
+//    foreach($row as $station){
+//        $class = $station['antClass'];
+//
+//        switch ($class) {
+//            case 'A':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_A)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'C3':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_C3)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'B1':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_B1)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'C2':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_C2)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'B':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_B)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'C1':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_C1)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'C0':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_C0)
+//                    $rangedResults[] = $station;
+//                break;
+//            case 'C':
+//                if(distanceBetween($latitude, $longitude, $station['latitude'], $station['longitude'], "M") < $class_C)
+//                    $rangedResults[] = $station;
+//                break;
+//            default:
+//                break;
+//        }
+//    }
+
+   // $_POST['class'] = $class;
+    $_POST['results'] = $rangedResults;
 
 
     require("locationSearch.php");
 }
+
 
 /**
  * @param $location the given address to geocode
