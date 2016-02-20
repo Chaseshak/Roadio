@@ -8,18 +8,15 @@
 <!-- Link in the bootstrap css -->
 <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
 <!-- Link in javascript -->
-    <script src="JS/home.js"></script>
-    <link rel="stylesheet" href="CSS/home.css"
+
+    <link rel="stylesheet" href="CSS/home.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Google maps library -->
     <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-    <!-- For creating google maps markers -->
-    <script type="text/javascript" src="JS/markerclusterer.js"></script>
-    <script type="text/javascript" src="Resources/stations.json"></script>
-    <script type="text/javascript" src="JS/home.js"></script>
+
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <title><?php echo $_POST['title'] ?></title>
 </head>
