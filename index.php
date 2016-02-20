@@ -31,18 +31,12 @@ function locationSearch($location){
     // get the connection
     $latitude = $data_arr[0];
     // calc upper and lower bounds of latitude search
-    $diffLat = $_GET['rangeSelect'] / 69;
+    $diffLat = 100 / 69;
     $upperLat = $latitude + $diffLat;
     $lowerLat = $latitude - $diffLat;
     $longitude = $data_arr[1];
-    $divisor = 1;
-    if($latitude < 15) $divisor = 68;
-    elseif($latitude < 25) $divisor = 65;
-    elseif($latitude < 35) $divisor = 60;
-    elseif($latitude < 45) $divisor = 53;
-    elseif($latitude < 55) $divisor = 44;
-    else $divisor =  37;
-    $diffLong = $_GET['rangeSelect'] / $divisor;
+    $divisor = 37;
+    $diffLong = 100 / $divisor;
     $upperLong = $longitude + $diffLong;
     $lowerLong = $longitude - $diffLong;
 

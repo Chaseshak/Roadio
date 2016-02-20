@@ -45,7 +45,7 @@
             </ul>
             <form class="navbar-search pull-right form-inline" method="get" role="search" name="locationForm" id="locationForm" action="./?index.php">
                 <div style="color: #ffffff; margin-top: 10px;">
-                    Search Stations Near:
+                    Search Within Range of:
                     <?php
                         if(isset($_GET['locationSearch'])) {
                             ?>
@@ -54,23 +54,12 @@
                         } else{
 
                        ?>
-                        <input type="text" class="form-control" placeholder="Enter a Location" id="locationSearch"  name="locationSearch" required>
+                        <input style="margin-left: 5px; width: 225px" type="text" class="form-control" placeholder="Enter a Location" id="locationSearch"  name="locationSearch" required>
                     <?php
                         }
                     ?>
-                    <?php
-                            // TODO change element
-                    ?>
-                    <select class="form-control c-select" id="rangeSelect" name="rangeSelect" >
-                        <option value="100">100 miles</option>
-                        <option value="75">75 miles</option>
-                        <option value="50">50 miles</option>
-                        <option value="40">40 miles</option>
-                        <option value="30">30 miles</option>
-                        <option value="20">20 miles</option>
-                        <option value="10">10 miles</option>
-                    </select>
-                        <button class="btn btn-default" type="submit" style="padding-bottom: 7px;"><span class="glyphicon glyphicon-search"></span>
+
+                        <button class="btn btn-default" type="submit" style="padding-bottom: 6px;"><span class="glyphicon glyphicon-search"></span>
                         </button>
                 </div>
             </form>
