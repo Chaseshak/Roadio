@@ -26,6 +26,9 @@ function loadResults() {
         }
         createRow(callsign, toPrint);
     }
+
+    // sort the possible genres array
+    possibleGenres.sort();
 }
 
 function createRow(index, toPrint){
@@ -57,6 +60,7 @@ function createFilters(){
         // create the container for checkbox
         var divContain = document.createElement("div");
         divContain.className = "checkbox";
+        divContain.style = "padding-left: 10px";
 
         // create the checkbox
         var checkbox = document.createElement("input");
@@ -78,6 +82,10 @@ function createFilters(){
     }
 }
 
+/**
+ * Called when the filter genres dropdown is clicked and changes the glyphicon
+ * appropriately to up or down.
+ */
 function changeFilterIcon(){
     var glyph = document.getElementById("filterGlyph");
     if(glyph.className == "glyphicon glyphicon-chevron-up pull-right")
@@ -86,6 +94,10 @@ function changeFilterIcon(){
         glyph.className = "glyphicon glyphicon-chevron-up pull-right";
 }
 
+/**
+ * Called when the AM/FM dropdown is clicked and changes the glyphicon
+ * appropriately to up or down.
+ */
 function changeFM_AMIcon(){
     var glyph = document.getElementById("filterGlyph2");
     if(glyph.className == "glyphicon glyphicon-chevron-up pull-right")
