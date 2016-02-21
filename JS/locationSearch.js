@@ -60,13 +60,13 @@ function createFilters(){
 
         // create the checkbox
         var checkbox = document.createElement("input");
-        checkbox.id = "checkbox" + i;
         checkbox.type="checkbox";
+        checkbox.id = "checkbox" + i;
         checkbox.style="margin-left: 0;";
 
         // create the label
         var label = document.createElement("label");
-        label.htmlFor = "checkbox " + i;
+        label.htmlFor = "checkbox" + i;
         label.innerHTML = possibleGenres[i];
 
         divContain.appendChild(checkbox);
