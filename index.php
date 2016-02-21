@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chase
- * Date: 2/17/2016
- * Time: 12:45 AM
- */
+
 $location = isset($_GET['locationSearch']) ? $_GET['locationSearch'] : "";
-require ("config.php");
+require ("config.php"); // require config file for DB settings
 
 if($location == ""){
     homepage();
@@ -17,14 +12,14 @@ else{
 
 // Simply display the homepage
 function homepage(){
-    $_POST['title'] = "Roadio";
+    $_POST['title'] = "Roadio"; // Post the homepages title
     require("home.php");
 }
 
 function locationSearch($location){
     $_POST['title'] = "Stations Near $location";
+
     $data_arr = geocode($location); // geocode the address given
-    $_POST['data_arr'] = $data_arr;
     // Query SQL database for locations within given range
     // One degree of latitude approx. equal to 69 miles
     // eqn: deg = (enteredMiles/69)
@@ -44,10 +39,14 @@ function locationSearch($location){
     if($conn->connect_error){
         $_POST['results'] = "Connection error";
     }
-    $sql = "SELECT callsign, antClass, frequency, city, state, latitude, longitude, licensee, primaryGenre, website FROM fmstations WHERE (latitude BETWEEN $lowerLat AND $upperLat) AND (longitude BETWEEN $lowerLong AND $upperLong)";
-
+    $sql = "SELECT callsign, antClass, frequency, city, state, latitude, longitude, licensee, primaryGenre, website
+    FROM fmstations WHERE
+    (latitude BETWEEN $lowerLat AND $upperLat) AND
+    (longitude BETWEEN $lowerLong AND $upperLong)";
     $result = $conn->query($sql);
     $results = array();
+
+    // Store all possible station class ranges
     $class_A = 17.6;
     $class_C3 = 24.3;
     $class_B1 = 27.8;
@@ -56,11 +55,17 @@ function locationSearch($location){
     $class_C1 = 44.9;
     $class_C0 = 51.8;
     $class_C = 57.0;
+
+    // array to store the results after range check
     $rangedResults[] = array();
 
     while($row = $result->fetch_assoc()){
         $class = $row['antClass'];
 
+        /**
+         * Switch statement on radio station class to determine if entered location is in range of
+         * radio station's predicted broadcasting range.
+         */
         switch ($class) {
             case 'A':
                 if(distanceBetween($latitude, $longitude, $row['latitude'], $row['longitude'], "M") < $class_A)
@@ -100,13 +105,13 @@ function locationSearch($location){
     }
     $_POST['results'] = $rangedResults;
 
-    echo "<script> var fmData = $results; </script>";
-
+    // Require the php page to display the results
     require("locationSearch.php");
 
 }
 
 /**
+ * Geocodes the entered location, or turns a written address into lat, long, coordinates.
  * @param $location the given address to geocode
  * @return array|bool, returns array of data if successful, else returns false.
  */
@@ -158,6 +163,9 @@ function geocode($location){
 
 }
 
+/**
+ * Calculates the distance between two lat and long points given a unit (M, K, M) to output the result.
+ */
 function distanceBetween($searchedLat, $searchedLong, $resultLat, $resultLong, $unit){
     $theta = $searchedLong - $resultLong;
     $dist = sin(deg2rad($searchedLat)) * sin(deg2rad($resultLat)) +  cos(deg2rad($searchedLat)) * cos(deg2rad($resultLat)) * cos(deg2rad($theta));

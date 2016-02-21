@@ -1,4 +1,3 @@
-</div>
 
 <footer>
     <div class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 10px">
