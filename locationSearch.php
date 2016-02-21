@@ -16,7 +16,10 @@
         <div id="sidebar" style="padding-left: 10px;" class="panel panel-default"
              data-spy="affix" data-offset-top="60" data-offset-bottom="400">
             <!-- Default panel contents -->
-            <div class="panel-heading"><h3>Filter Results</h3></div>
+            <div class="panel-heading">
+                <h3 style="display: inline;">Filter Results</h3>
+                <button  type="submit" class="btn btn-success pull-right">Update Filters</button>
+            </div>
             <div class="panel-body">
                 <span id="filterGlyph" class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true" style="margin-top: 12px;"></span>
                 <h4 data-toggle="collapse" href="#collapseFilters" onclick="changeFilterIcon()">Filter Genres</h4>
@@ -28,7 +31,14 @@
                 <h4 data-toggle="collapse" href="#collapseAM_FM" onclick="changeFM_AMIcon()">Show AM/FM</h4>
             </div>
             <div id="collapseAM_FM" class="panel-collapse collapse">
-
+                <div class="checkbox">
+                    <input type="checkbox" id="onlyFM" style="margin-left: 0">
+                    <label for="onlyFM">FM</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="onlyAM" style="margin-left: 0">
+                    <label for="onlyAM">AM</label>
+                </div>
             </div>
         </div>
        </div>

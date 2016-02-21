@@ -8,14 +8,14 @@
                     <li><a href="mailto:roadio@gmail.com?Subject=Roadio%20Contact">Contact Us</a></li>
                     <li><a href="#">Submit a Bug</a></li>
                     <li><a href="#">Feedback</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#submitFeedback" data-toggle="modal" target="#submitFeedback">Terms &amp; Conditions</a></li>
                     <li><a href="#privacyPolicy" data-toggle="modal" target="#privacyPolicy">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
-<!-- Modal -->
+<!-- Modal Privacy Policy -->
 <div id="privacyPolicy" class="modal fade" role="dialog">
     <div class="modal-dialog" style="width: 60%">
 
@@ -35,5 +35,27 @@
 
     </div>
 </div>
+
+<!-- Modal Submit Feedback -->
+
+<div id="submitFeedback" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Submit Feedback</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

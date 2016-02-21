@@ -6,10 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff404748-83b5-4ace-911f-e427d8ea7a9a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/privacypolicy.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/locationSearch.css" afterPath="$PROJECT_DIR$/CSS/locationSearch.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/locationSearch.js" afterPath="$PROJECT_DIR$/JS/locationSearch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/locationSearch.php" afterPath="$PROJECT_DIR$/locationSearch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/footer.php" afterPath="$PROJECT_DIR$/templates/include/footer.php" />
     </list>
     <ignored path="Roadio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +57,8 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="5.1153846">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -79,15 +79,18 @@
       <file leaf-file-name="locationSearch.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locationSearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25569177">
-              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.61551726">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="e#557#583#0#HTML" expanded="true" />
                 <element signature="e#664#691#0#HTML" expanded="true" />
-                <element signature="e#1057#1082#0#HTML" expanded="true" />
-                <element signature="e#1463#1488#0#HTML" expanded="true" />
-                <element signature="e#1862#1978#0#HTML" expanded="true" />
-                <marker date="1456035252107" expanded="true" signature="583:584" placeholder="..." />
+                <element signature="e#901#925#0#HTML" expanded="true" />
+                <element signature="e#1210#1235#0#HTML" expanded="true" />
+                <element signature="e#1616#1641#0#HTML" expanded="true" />
+                <element signature="e#1941#1963#0#HTML" expanded="true" />
+                <element signature="e#2133#2155#0#HTML" expanded="true" />
+                <element signature="e#2398#2514#0#HTML" expanded="true" />
+                <marker date="1456036426249" expanded="true" signature="583:584" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -165,19 +168,19 @@
         <option value="$PROJECT_DIR$/CSS/home.css" />
         <option value="$PROJECT_DIR$/include/header.php" />
         <option value="$PROJECT_DIR$/templates/locationSearch.php" />
-        <option value="$PROJECT_DIR$/templates/include/privacypolicy.htm" />
         <option value="$PROJECT_DIR$/classes/FM_Station.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/Resources/stations.json" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/81850457-80f4-428e-93ad-71f1e1326ddb/console.sql" />
         <option value="$PROJECT_DIR$/JS/home.js" />
-        <option value="$PROJECT_DIR$/templates/include/footer.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/templates/include/header.php" />
         <option value="$PROJECT_DIR$/CSS/locationSearch.css" />
         <option value="$PROJECT_DIR$/JS/locationSearch.js" />
+        <option value="$PROJECT_DIR$/templates/include/privacypolicy.htm" />
+        <option value="$PROJECT_DIR$/templates/include/footer.php" />
         <option value="$PROJECT_DIR$/locationSearch.php" />
       </list>
     </option>
@@ -192,9 +195,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP XAMPP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1137" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -377,13 +381,14 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Roadio\Roadio\templates\include" />
+      <recent name="C:\xampp\htdocs\Roadio\Resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Roadio\Resources" />
       <recent name="C:\xampp\htdocs\Roadio" />
       <recent name="C:\xampp\htdocs\Roadio\templates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Roadio\Resources" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.FM_Station.php">
@@ -552,14 +557,20 @@
       <option name="project" value="LOCAL" />
       <updated>1456015380792</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added grid layout for search results and filters for genres. Added conatiner for AM/FM filter. Need to get searches for AM stations too and then complete filtering based on AM/FM.">
+      <created>1456035309800</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1456035309800</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1137" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14362177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11786237" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -611,7 +622,8 @@
     <MESSAGE value="Fixed navigtion bar to get rid of range select" />
     <MESSAGE value="Got PHP results of location search into external JS and create stylesheet for displaying locationSearch data" />
     <MESSAGE value="Created rows and col layout for location search results dynamically from JS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created rows and col layout for location search results dynamically from JS" />
+    <MESSAGE value="Added grid layout for search results and filters for genres. Added conatiner for AM/FM filter. Need to get searches for AM stations too and then complete filtering based on AM/FM." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added grid layout for search results and filters for genres. Added conatiner for AM/FM filter. Need to get searches for AM stations too and then complete filtering based on AM/FM." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -697,10 +709,13 @@
           <folding>
             <element signature="e#557#583#0#HTML" expanded="true" />
             <element signature="e#664#691#0#HTML" expanded="true" />
-            <element signature="e#1057#1082#0#HTML" expanded="true" />
-            <element signature="e#1463#1488#0#HTML" expanded="true" />
-            <element signature="e#1862#1978#0#HTML" expanded="true" />
-            <marker date="1456035252107" expanded="true" signature="583:584" placeholder="..." />
+            <element signature="e#901#925#0#HTML" expanded="true" />
+            <element signature="e#1210#1235#0#HTML" expanded="true" />
+            <element signature="e#1616#1641#0#HTML" expanded="true" />
+            <element signature="e#1941#1963#0#HTML" expanded="true" />
+            <element signature="e#2133#2155#0#HTML" expanded="true" />
+            <element signature="e#2398#2514#0#HTML" expanded="true" />
+            <marker date="1456036426249" expanded="true" signature="583:584" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -779,10 +794,13 @@
           <folding>
             <element signature="e#557#583#0#HTML" expanded="true" />
             <element signature="e#664#691#0#HTML" expanded="true" />
-            <element signature="e#1057#1082#0#HTML" expanded="true" />
-            <element signature="e#1463#1488#0#HTML" expanded="true" />
-            <element signature="e#1862#1978#0#HTML" expanded="true" />
-            <marker date="1456035252107" expanded="true" signature="583:584" placeholder="..." />
+            <element signature="e#901#925#0#HTML" expanded="true" />
+            <element signature="e#1210#1235#0#HTML" expanded="true" />
+            <element signature="e#1616#1641#0#HTML" expanded="true" />
+            <element signature="e#1941#1963#0#HTML" expanded="true" />
+            <element signature="e#2133#2155#0#HTML" expanded="true" />
+            <element signature="e#2398#2514#0#HTML" expanded="true" />
+            <marker date="1456036426249" expanded="true" signature="583:584" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -951,14 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
@@ -1005,6 +1015,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/include/privacypolicy.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.35638297">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JS/locationSearch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1013,17 +1031,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.1153846">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/locationSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25569177">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.61551726">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="e#557#583#0#HTML" expanded="true" />
             <element signature="e#664#691#0#HTML" expanded="true" />
-            <element signature="e#1057#1082#0#HTML" expanded="true" />
-            <element signature="e#1463#1488#0#HTML" expanded="true" />
-            <element signature="e#1862#1978#0#HTML" expanded="true" />
-            <marker date="1456035252107" expanded="true" signature="583:584" placeholder="..." />
+            <element signature="e#901#925#0#HTML" expanded="true" />
+            <element signature="e#1210#1235#0#HTML" expanded="true" />
+            <element signature="e#1616#1641#0#HTML" expanded="true" />
+            <element signature="e#1941#1963#0#HTML" expanded="true" />
+            <element signature="e#2133#2155#0#HTML" expanded="true" />
+            <element signature="e#2398#2514#0#HTML" expanded="true" />
+            <marker date="1456036426249" expanded="true" signature="583:584" placeholder="..." />
           </folding>
         </state>
       </provider>
