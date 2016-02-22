@@ -11,6 +11,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/locationSearch.js" afterPath="$PROJECT_DIR$/JS/locationSearch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/locationSearch.php" afterPath="$PROJECT_DIR$/locationSearch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/header.php" afterPath="$PROJECT_DIR$/templates/include/header.php" />
     </list>
     <ignored path="Roadio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,126 +45,105 @@
     <favorites_list name="Roadio" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5036622">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/include/header.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-17.0">
-                  <caret line="26" column="95" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-26.807692">
-                  <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-26.807692">
-                  <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-                  <folding>
-                    <marker date="1456117003288" expanded="true" signature="1213:1348" placeholder="SELECT calls... fmstations" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="locationSearch.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/locationSearch.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-31.807692">
-                  <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#557#583#0#HTML" expanded="true" />
-                    <element signature="e#992#1016#0#HTML" expanded="true" />
-                    <element signature="e#1067#1092#0#HTML" expanded="true" />
-                    <element signature="e#1536#1561#0#HTML" expanded="true" />
-                    <element signature="e#2127#2152#0#HTML" expanded="true" />
-                    <element signature="e#2455#2482#0#HTML" expanded="true" />
-                    <element signature="e#2539#2561#0#HTML" expanded="true" />
-                    <element signature="e#2683#2710#0#HTML" expanded="true" />
-                    <element signature="e#2767#2789#0#HTML" expanded="true" />
-                    <element signature="e#3159#3259#0#HTML" expanded="true" />
-                    <element signature="e#3459#3477#0#HTML" expanded="true" />
-                    <element signature="e#3538#3582#0#HTML" expanded="true" />
-                    <element signature="e#3662#3680#0#HTML" expanded="true" />
-                    <element signature="e#4192#4210#0#HTML" expanded="true" />
-                    <element signature="e#4737#4783#0#HTML" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="locationSearch.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CSS/locationSearch.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.13578275">
-                  <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="locationSearch.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/JS/locationSearch.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/home.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="1606" column="21" selection-start-line="1606" selection-start-column="21" selection-end-line="1606" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="locationSearch.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/JS/locationSearch.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.36150235">
-                  <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/include/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-30.73077">
+              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+              <folding>
+                <marker date="1456159289441" expanded="true" signature="1213:1348" placeholder="SELECT calls... fmstations" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="locationSearch.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/locationSearch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.307692">
+              <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
+              <folding>
+                <element signature="e#551#577#0#HTML" expanded="true" />
+                <element signature="e#955#980#0#HTML" expanded="true" />
+                <element signature="e#1061#1086#0#HTML" expanded="true" />
+                <element signature="e#2449#2476#0#HTML" expanded="true" />
+                <element signature="e#2533#2555#0#HTML" expanded="true" />
+                <element signature="e#2677#2704#0#HTML" expanded="true" />
+                <element signature="e#2761#2783#0#HTML" expanded="true" />
+                <element signature="e#3137#3237#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="locationSearch.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS/locationSearch.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="1606" column="21" selection-start-line="1606" selection-start-column="21" selection-end-line="1606" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="locationSearch.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS/locationSearch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49566588">
+              <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -200,11 +180,11 @@
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/templates/include/privacypolicy.htm" />
         <option value="$PROJECT_DIR$/templates/include/footer.php" />
+        <option value="$PROJECT_DIR$/CSS/locationSearch.css" />
         <option value="$PROJECT_DIR$/templates/include/header.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/locationSearch.php" />
         <option value="$PROJECT_DIR$/JS/locationSearch.js" />
-        <option value="$PROJECT_DIR$/CSS/locationSearch.css" />
       </list>
     </option>
   </component>
@@ -218,10 +198,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP XAMPP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1416" />
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -248,7 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -393,7 +372,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -605,14 +584,20 @@
       <option name="project" value="LOCAL" />
       <updated>1456112717515</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Completed layout for search results, need to add handling for website and range map modals.">
+      <created>1456120834990</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1456120834990</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09335937" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18701096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -669,7 +654,8 @@
     <MESSAGE value="Fixed labels to correclty map to checkboxes in genre filters" />
     <MESSAGE value="Started creating list results. Hard coded to display two list items to finish formatting." />
     <MESSAGE value="Dynamically running for-loop to populate search results." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamically running for-loop to populate search results." />
+    <MESSAGE value="Completed layout for search results, need to add handling for website and range map modals." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed layout for search results, need to add handling for website and range map modals." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -708,7 +694,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -718,7 +708,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
           <folding>
-            <marker date="1456117003288" expanded="true" signature="1213:1348" placeholder="SELECT calls... fmstations" />
+            <marker date="1456159289441" expanded="true" signature="1213:1348" placeholder="SELECT calls... fmstations" />
           </folding>
         </state>
       </provider>
@@ -758,21 +748,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#557#583#0#HTML" expanded="true" />
-            <element signature="e#992#1016#0#HTML" expanded="true" />
-            <element signature="e#1067#1092#0#HTML" expanded="true" />
-            <element signature="e#1536#1561#0#HTML" expanded="true" />
-            <element signature="e#2127#2152#0#HTML" expanded="true" />
-            <element signature="e#2455#2482#0#HTML" expanded="true" />
-            <element signature="e#2539#2561#0#HTML" expanded="true" />
-            <element signature="e#2683#2710#0#HTML" expanded="true" />
-            <element signature="e#2767#2789#0#HTML" expanded="true" />
-            <element signature="e#3159#3259#0#HTML" expanded="true" />
-            <element signature="e#3459#3477#0#HTML" expanded="true" />
-            <element signature="e#3538#3582#0#HTML" expanded="true" />
-            <element signature="e#3662#3680#0#HTML" expanded="true" />
-            <element signature="e#4192#4210#0#HTML" expanded="true" />
-            <element signature="e#4737#4783#0#HTML" expanded="true" />
+            <element signature="e#551#577#0#HTML" expanded="true" />
+            <element signature="e#955#980#0#HTML" expanded="true" />
+            <element signature="e#1061#1086#0#HTML" expanded="true" />
+            <element signature="e#2449#2476#0#HTML" expanded="true" />
+            <element signature="e#2533#2555#0#HTML" expanded="true" />
+            <element signature="e#2677#2704#0#HTML" expanded="true" />
+            <element signature="e#2761#2783#0#HTML" expanded="true" />
+            <element signature="e#3137#3237#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -806,7 +789,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -846,21 +833,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
-            <element signature="e#557#583#0#HTML" expanded="true" />
-            <element signature="e#992#1016#0#HTML" expanded="true" />
-            <element signature="e#1067#1092#0#HTML" expanded="true" />
-            <element signature="e#1536#1561#0#HTML" expanded="true" />
-            <element signature="e#2127#2152#0#HTML" expanded="true" />
-            <element signature="e#2455#2482#0#HTML" expanded="true" />
-            <element signature="e#2539#2561#0#HTML" expanded="true" />
-            <element signature="e#2683#2710#0#HTML" expanded="true" />
-            <element signature="e#2767#2789#0#HTML" expanded="true" />
-            <element signature="e#3159#3259#0#HTML" expanded="true" />
-            <element signature="e#3459#3477#0#HTML" expanded="true" />
-            <element signature="e#3538#3582#0#HTML" expanded="true" />
-            <element signature="e#3662#3680#0#HTML" expanded="true" />
-            <element signature="e#4192#4210#0#HTML" expanded="true" />
-            <element signature="e#4737#4783#0#HTML" expanded="true" />
+            <element signature="e#551#577#0#HTML" expanded="true" />
+            <element signature="e#955#980#0#HTML" expanded="true" />
+            <element signature="e#1061#1086#0#HTML" expanded="true" />
+            <element signature="e#2449#2476#0#HTML" expanded="true" />
+            <element signature="e#2533#2555#0#HTML" expanded="true" />
+            <element signature="e#2677#2704#0#HTML" expanded="true" />
+            <element signature="e#2761#2783#0#HTML" expanded="true" />
+            <element signature="e#3137#3237#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1018,29 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1606" column="21" selection-start-line="1606" selection-start-column="21" selection-end-line="1606" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/include/privacypolicy.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.35638297">
@@ -1048,70 +1005,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1606" column="21" selection-start-line="1606" selection-start-column="21" selection-end-line="1606" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.013302035">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/locationSearch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/include/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="26" column="95" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/locationSearch.js">
+    <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.807692">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        <state vertical-scroll-proportion="-30.73077">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
           <folding>
-            <marker date="1456117003288" expanded="true" signature="1213:1348" placeholder="SELECT calls... fmstations" />
+            <marker date="1456159289441" expanded="true" signature="1213:1348" placeholder="SELECT calls... fmstations" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/include/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.807692">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/locationSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.807692">
-          <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+        <state vertical-scroll-proportion="-22.307692">
+          <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
           <folding>
-            <element signature="e#557#583#0#HTML" expanded="true" />
-            <element signature="e#992#1016#0#HTML" expanded="true" />
-            <element signature="e#1067#1092#0#HTML" expanded="true" />
-            <element signature="e#1536#1561#0#HTML" expanded="true" />
-            <element signature="e#2127#2152#0#HTML" expanded="true" />
-            <element signature="e#2455#2482#0#HTML" expanded="true" />
-            <element signature="e#2539#2561#0#HTML" expanded="true" />
-            <element signature="e#2683#2710#0#HTML" expanded="true" />
-            <element signature="e#2767#2789#0#HTML" expanded="true" />
-            <element signature="e#3159#3259#0#HTML" expanded="true" />
-            <element signature="e#3459#3477#0#HTML" expanded="true" />
-            <element signature="e#3538#3582#0#HTML" expanded="true" />
-            <element signature="e#3662#3680#0#HTML" expanded="true" />
-            <element signature="e#4192#4210#0#HTML" expanded="true" />
-            <element signature="e#4737#4783#0#HTML" expanded="true" />
+            <element signature="e#551#577#0#HTML" expanded="true" />
+            <element signature="e#955#980#0#HTML" expanded="true" />
+            <element signature="e#1061#1086#0#HTML" expanded="true" />
+            <element signature="e#2449#2476#0#HTML" expanded="true" />
+            <element signature="e#2533#2555#0#HTML" expanded="true" />
+            <element signature="e#2677#2704#0#HTML" expanded="true" />
+            <element signature="e#2761#2783#0#HTML" expanded="true" />
+            <element signature="e#3137#3237#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/locationSearch.css">
+    <entry file="file://$PROJECT_DIR$/JS/locationSearch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13578275">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.49566588">
+          <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
           <folding />
         </state>
       </provider>

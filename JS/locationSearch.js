@@ -21,11 +21,6 @@ function loadResults() {
         if($.inArray(fmData[i]['primaryGenre'], possibleGenres) == -1) {
             possibleGenres.push(fmData[i]['primaryGenre']);
         }
-        //for (var key in fmData[i]) { // to iterate through array
-        //    //document.write(key + ": " + fmData[i][key] + "|");
-        //    toPrint += fmData[i][key] + "|";
-        //}
-        //createRow(callsign, toPrint);
     }
     // sort the possible genres array
     possibleGenres.sort();
@@ -91,17 +86,62 @@ function passToWebsiteModal(id){
 function passToRangeMapModal(data){
     var dataArr = [];
     dataArr = data.split(",");
+    var modalContain = document.getElementById("rangeHeader");
+    modalContain.innerHTML = "Estimated Range for " + dataArr[0];
     /**
      * dataArr layout:
-     * callsign
-     * appId
-     * frequency
-     * city
-     * state
+     * callsign 0
+     * appId 1
+     * frequency 2
+     * city 3
+     * state 4
+     * latitude (of station) 5
+     * longitude (of station) 6
+     * Entered Lat 7
+     * Entered Lng 8
+     * Entered Loc 9
      */
-    for(i = 0; i < dataArr.length; i++){
-        alert(dataArr[i]);
+    // build url
+
+    var lati = parseFloat(dataArr[7]);
+    var lngi = parseFloat(dataArr[8]);
+    var myLatLng = {lat: lati, lng: lngi};
+    var urlKML = "https://transition.fcc.gov/fcc-bin/contourplot.kml?appid=" + dataArr[1] +
+            "&call=" + dataArr[0] + "&freq=" + dataArr[2] + "&contour=60&city=" +
+            dataArr[3] + "&state=" + dataArr[4] + "&.kml";
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: myLatLng
+        });
+
+        var location = dataArr[9] + ", " + dataArr[10];
+        var contentStr = "<h5>Your Location:</h5>" + "<p>" + location + "</p>";
+        var infoWindow = new google.maps.InfoWindow({
+            content: contentStr
+        });
+
+        var marker = new google.maps.Marker({
+           position: myLatLng,
+            map: map,
+           title: 'Your Entered Location'
+        });
+
+        marker.addListener('click', function(){
+           infoWindow.open(map, marker);
+        });
+
+        var ctaLayer = new google.maps.KmlLayer({
+            url: urlKML,
+            map: map
+        });
     }
+
+    $("#rangeDoc").on("shown.bs.modal", function(e) {
+        // Trigger map on modal load
+        initMap();
+    });
 }
 
 function populateSearchResults(results, filters){
@@ -182,22 +222,22 @@ function populateSearchResults(results, filters){
                 // handle case where no website found
                 if(results[i]['website'] == null){
                     website.href="#noSite";
-                    website.innerHTML = "No site, click to add one!";
+                    website.innerHTML = "No site, add one!";
                     website.setAttribute("data-toggle", "modal");
                     website.setAttribute("onclick", "passToWebsiteModal(\"" + results[i]['callsign'] + "\");");
                     website.target = "#noSite";
                 }
                 else{
                     website.href = results[i]['website'];
-                    website.innerHTML = results[i]['callsign'] + "'s website";
+                    website.innerHTML = results[i]['callsign'] + "'s Website";
                     website.target = "_blank";
                 }
                 webContain.appendChild(website);
 
                 // create 4th column
                 var col4 = document.createElement("div");
-                col4.className = "col-xs-4; col-sm-3";
-                col4.style="padding: 0";
+                col4.className = "col-xs-4 col-sm-3";
+                col4.style="padding-right: 10px; padding-left:0px;";
 
                 // create ul list
                 var ul3 = document.createElement("ul");
@@ -221,7 +261,9 @@ function populateSearchResults(results, filters){
                 rangeMap.setAttribute("data-toggle", "modal");
                 rangeMap.setAttribute("onclick" , "passToRangeMapModal(\"" +
                     results[i]['callsign'] + "," + results[i]['appId'] + "," + results[i]['frequency'] + "," +
-                    results[i]['city'] + "," + results[i]['state']
+                    results[i]['city'] + "," + results[i]['state'] + ", " + results[i]['latitude'] + ", " + results[i]['longitude'] +
+                    ", " + results[i]['enteredLat'] + ", " +
+                    results[i]['enteredLng'] + ", " + results[i]['enteredLoc']
                     + "\");");
                 rangeDocContain.appendChild(rangeMap);
 

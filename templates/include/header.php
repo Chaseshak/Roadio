@@ -15,7 +15,8 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Google maps library -->
-    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.google.com/maps/api/js"></script>
+
 
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <title><?php echo $_POST['title'] ?></title>
@@ -24,7 +25,7 @@
 <body style="font-family: 'Montserrat', sans-serif; background-color: #686766">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid" style="padding-left:15px; padding-right: 15px; padding-top: 0;">
+    <div class="container" style="padding-left:15px; padding-right: 15px; padding-top: 0;">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navTop">
                 <span class="sr-only">Toggle navigation</span>

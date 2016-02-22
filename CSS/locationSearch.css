@@ -14,3 +14,7 @@
 #panelFilter:hover {
     background-color: #e6e6e6
 }
+
+#map {
+    height: 400px;
+}

@@ -61,7 +61,9 @@ function locationSearch($location){
 
     while($row = $result->fetch_assoc()){
         $class = $row['antClass'];
-
+        $row['enteredLat'] = $latitude;
+        $row['enteredLng'] = $longitude;
+        $row['enteredLoc'] = $location;
         /**
          * Switch statement on radio station class to determine if entered location is in range of
          * radio station's predicted broadcasting range.
