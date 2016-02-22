@@ -15,8 +15,8 @@ function loadResults() {
     var results = [];
     for (var i = 1; i < fmData.length; i++) {
         callsign = fmData[i]['callsign'];
-        toPrint = "";
         results.push(fmData[i]);
+        toPrint = "";
         // Check if the possible filters are added yet, if not add them to the filter array
         if($.inArray(fmData[i]['primaryGenre'], possibleGenres) == -1) {
             possibleGenres.push(fmData[i]['primaryGenre']);
@@ -81,6 +81,28 @@ function createFilters(){
 
     }
 }
+function passToWebsiteModal(id){
+    var title = document.getElementById("addSiteModal");
+    title.innerHTML = "Add website for " + id;
+    var formCallsign = document.getElementById("callsignForm");
+    formCallsign.value = id;
+}
+
+function passToRangeMapModal(data){
+    var dataArr = [];
+    dataArr = data.split(",");
+    /**
+     * dataArr layout:
+     * callsign
+     * appId
+     * frequency
+     * city
+     * state
+     */
+    for(i = 0; i < dataArr.length; i++){
+        alert(dataArr[i]);
+    }
+}
 
 function populateSearchResults(results, filters){
     // if no filters, display all results
@@ -133,14 +155,98 @@ function populateSearchResults(results, filters){
                 city = capitalizeFirstLetter(city);
                 location.innerHTML = city + ", " + results[i]['state'];
 
+                // create 3rd column
+                var col3 = document.createElement("div");
+                col3.className = "col-xs-4 col-sm-3";
+                col3.style = "padding: 0";
+
+                // create ul list
+                var ul2 = document.createElement("ul");
+                ul2.className = "list-group";
+
+                // create li item Genre
+                var liGenre = document.createElement("li");
+                liGenre.className = "list-group-item clearfix";
+                var genre = document.createElement("h4");
+                genre.className = "pull-left";
+                genre.innerHTML = "<strong>" + results[i]['primaryGenre'] + "</strong>";
+                // create li item website
+                // check if website found
+                var liSite = document.createElement("li");
+                liSite.className = "list-group-item clearfix";
+                var webContain = document.createElement("h5");
+                webContain.className = "pull-left";
+                var website = document.createElement("a");
+                website.id = results[i]['callsign'];
+
+                // handle case where no website found
+                if(results[i]['website'] == null){
+                    website.href="#noSite";
+                    website.innerHTML = "No site, click to add one!";
+                    website.setAttribute("data-toggle", "modal");
+                    website.setAttribute("onclick", "passToWebsiteModal(\"" + results[i]['callsign'] + "\");");
+                    website.target = "#noSite";
+                }
+                else{
+                    website.href = results[i]['website'];
+                    website.innerHTML = results[i]['callsign'] + "'s website";
+                    website.target = "_blank";
+                }
+                webContain.appendChild(website);
+
+                // create 4th column
+                var col4 = document.createElement("div");
+                col4.className = "col-xs-4; col-sm-3";
+                col4.style="padding: 0";
+
+                // create ul list
+                var ul3 = document.createElement("ul");
+                ul3.className = "list-group";
+
+                // create li item freq
+                var liFreq = document.createElement("li");
+                liFreq.className = "list-group-item clearfix";
+                var freq = document.createElement("h4");
+                freq.className = "pull-left";
+                freq.innerHTML = "<strong>" + results[i]['frequency'] + "</strong>";
+                // create li item for range map
+                var liRangeMap = document.createElement("li");
+                liRangeMap.className = "list-group-item clearfix";
+                var rangeDocContain = document.createElement("h5");
+                rangeDocContain.className = "pull-left";
+                var rangeMap = document.createElement("a");
+                rangeMap.id = results[i]['callsign'] + "RangeDoc";
+                rangeMap.innerHTML = "Range Map";
+                rangeMap.href="#rangeDoc";
+                rangeMap.setAttribute("data-toggle", "modal");
+                rangeMap.setAttribute("onclick" , "passToRangeMapModal(\"" +
+                    results[i]['callsign'] + "," + results[i]['appId'] + "," + results[i]['frequency'] + "," +
+                    results[i]['city'] + "," + results[i]['state']
+                    + "\");");
+                rangeDocContain.appendChild(rangeMap);
+
                 // add all elements
                 liCall.appendChild(callsign);
                 liLocation.appendChild(location);
                 ul1.appendChild(liCall);
                 ul1.appendChild(liLocation);
                 col2.appendChild(ul1);
-                row.appendChild(col2);
 
+                liGenre.appendChild(genre);
+                liSite.appendChild(webContain);
+                ul2.appendChild(liGenre);
+                ul2.appendChild(liSite);
+                col3.appendChild(ul2);
+
+                liFreq.appendChild(freq);
+                liRangeMap.appendChild(rangeDocContain);
+                ul3.appendChild(liFreq);
+                ul3.appendChild(liRangeMap);
+                col4.appendChild(ul3);
+
+                row.appendChild(col2);
+                row.appendChild(col3);
+                row.appendChild(col4);
                 // add row to container
                 var container = document.getElementById("containerResults");
                 container.appendChild(row);
@@ -148,7 +254,6 @@ function populateSearchResults(results, filters){
                 var hr = document.createElement("hr");
                 hr.className = "hr-location";
                 container.appendChild(hr);
-
             }
         }
     }
@@ -157,6 +262,8 @@ function populateSearchResults(results, filters){
 
     }
 }
+
+
 
 function capitalizeFirstLetter(string){
     return string.charAt(0).toUpperCase() + string.slice(1);

@@ -12,7 +12,7 @@
 
 <div class="container-fluid" style="padding-top: 80px;">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
             <!-- Begin Filter sidebar -->
         <div id="lowerNav" class="panel panel-default"
              data-spy="affix" data-offset-top="60" data-offset-bottom="400">
@@ -20,7 +20,7 @@
             <div class="panel-heading">
                 <ul class="list-inline">
                     <li style="padding-top: 8px;"> <h3 style="display: inline;">Filter Results</h3> </li>
-                    <li class="pull-right" style="padding-top: 6px;"><button type="submit" class="btn btn-success">Update Filters</button></li>
+                    <li style="padding-top: 6px;"><button type="submit" class="btn btn-success">Update Filters</button></li>
                 </ul>
             </div>
             <!-- Filters for genre container (Dynamically populated) -->
@@ -51,7 +51,7 @@
         </div> <!-- End filter sidebar -->
        </div>
         <!-- Container for search results (dynamically populated -->
-        <div class="col-md-9" align="center">
+        <div class="col-md-10" align="center">
             <div class="container-fluid" id="containerResults" style="border: 3px solid #222222; border-radius: 5px; background-color: #F5F5F5; padding-top: 10px;">
                 <!-- begin list result for displaying results -->
                 <div class="row">
@@ -93,9 +93,54 @@
                 <hr class="hr-location">
             </div>
         </div>
-
     </div>
-
 </div>
+    <!-- Modal for submittig website -->
+    <div id="noSite" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="addSiteModal"></h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="callsignForm">Callsign</label>
+                            <input type="text" class="form-control" id ="callsignForm" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website URL</label>
+                            <input type="url" class="form-control" id="website">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for displaying KML Range docs -->
+    <div id="rangeDoc" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Estimated Range for </h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <?php include "templates/include/footer.php"; ?>
