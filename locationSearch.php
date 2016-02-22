@@ -10,11 +10,11 @@
 
 <!-- Main container for results -->
 
-<div class="container-fluid" style="padding-top: 60px;">
+<div class="container-fluid" style="padding-top: 80px;">
     <div class="row">
         <div class="col-md-3">
             <!-- Begin Filter sidebar -->
-        <div id="sidebar" class="panel panel-default"
+        <div id="lowerNav" class="panel panel-default"
              data-spy="affix" data-offset-top="60" data-offset-bottom="400">
             <!-- Default panel contents -->
             <div class="panel-heading">
@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <!-- Filters for genre container (Dynamically populated) -->
-            <div class="panel-body">
+            <div class="panel-body" id ="panelFilter">
                 <span data-toggle="collapse" href="#collapseFilters"
                     id="filterGlyph" class="glyphicon glyphicon-chevron-down pull-right"
                       aria-hidden="true" style="margin-top: 12px;" onclick="changeFilterIcon()"></span>
@@ -32,7 +32,7 @@
             </div> <!-- End container for filters by genre -->
             <div id="collapseFilters" class="panel-collapse collapse">
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="panelFilter">
                 <span id="filterGlyph2" data-toggle="collapse" href="#collapseAM_FM" onclick="changeFM_AMIcon()"
                       class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true" style="margin-top: 12px;"></span>
                 <h4 data-toggle="collapse" href="#collapseAM_FM" onclick="changeFM_AMIcon()">Show AM/FM</h4>
@@ -52,7 +52,7 @@
        </div>
         <!-- Container for search results (dynamically populated -->
         <div class="col-md-9" align="center">
-            <div class="container-fluid" id="container" style="border: 3px solid #222222; border-radius: 5px; background-color: #F5F5F5; padding-top: 10px;">
+            <div class="container-fluid" id="containerResults" style="border: 3px solid #222222; border-radius: 5px; background-color: #F5F5F5; padding-top: 10px;">
                 <!-- begin list result for displaying results -->
                 <div class="row">
                     <!-- Display the icon -->
@@ -61,90 +61,36 @@
                     </div>
                     <div class="col-xs-4 col-sm-3" style="padding: 0">
                         <ul class="list-group">
-                            <li class="list-group-item">
-                                <strong>Callsign:</strong> WKLH
+                            <li class="list-group-item clearfix">
+                                <h4 class="pull-left"><strong>WKLH</strong> </h4>
                             </li>
-                            <li class="list-group-item">
-                                <strong>Frequency:</strong> 88.9 MHz
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Location: </strong>Baraboo, WI
+                            <li class="list-group-item clearfix">
+                                <h5 class="pull-left">Barbaroo, WI</h5>
                             </li>
                         </ul>
                     </div>
                     <div class="col-xs-4 col-sm-3" style="padding: 0">
                         <ul class="list-group">
-                            <li class="list-group-item">
-                                <strong>Callsign:</strong> WKLH
+                            <li class="list-group-item clearfix">
+                                <h4 class="pull-left"><strong>Classical</strong></h4>
                             </li>
-                            <li class="list-group-item">
-                                <strong>Frequency:</strong> 88.9 MHz
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Location: </strong>Baraboo, WI
+                            <li class="list-group-item clearfix">
+                                <h5 class="pull-left"><a href="#">Website</a></h5>
                             </li>
                         </ul>
                     </div>
                     <div class="col-xs-4 col-sm-3" style="padding-right: 10px; padding-left:0px;">
                         <ul class="list-group">
-                            <li class="list-group-item">
-                                <strong>Callsign:</strong> WKLH
+                            <li class="list-group-item clearfix">
+                                <h4 class="pull-left"><strong>88.9 MHz</strong></h4>
                             </li>
-                            <li class="list-group-item">
-                                <strong>Frequency:</strong> 88.9 MHz
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Location: </strong>Baraboo, WI
+                            <li class="list-group-item clearfix">
+                                <h5 class="pull-left"><a href="#">Range Map</a></h5>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <hr class="hr-location">
-                <div class="row">
-                    <!-- Display the icon -->
-                    <div class="hidden-xs col-sm-3" style="padding: 0">
-                        <img src="Resources/radioIcon.png" style="max-height: 140px; max-width: 134px;">
-                    </div>
-                    <div class="col-xs-4 col-sm-3" style="padding: 0">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <strong>Callsign:</strong> WKLH
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Frequency:</strong> 88.9 MHz
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Location: </strong>Baraboo, WI
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-4 col-sm-3" style="padding: 0">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <strong>Callsign:</strong> WKLH
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Frequency:</strong> 88.9 MHz
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Location: </strong>Baraboo, WI
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-4 col-sm-3" style="padding-right: 10px; padding-left:0px;">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <strong>Callsign:</strong> WKLH
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Frequency:</strong> 88.9 MHz
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Location: </strong>Baraboo, WI
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
 

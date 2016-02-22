@@ -24,7 +24,7 @@
 <body style="font-family: 'Montserrat', sans-serif; background-color: #686766">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid" style="padding-left:15px; padding-right: 15px; padding-top: 0;">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navTop">
                 <span class="sr-only">Toggle navigation</span>
