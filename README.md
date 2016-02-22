@@ -9,7 +9,10 @@ Roadio is a web application to find radio stations along your route or within ra
 - Can view Range Map, KML overlay of the estimated coverage range for a given radio station
 
 ### Search along a Route
-- Enter a start
+- Enter a start and end destination
+- Displays their route and allows them to select which leg they want to view with possible stations
+- Allows user to say "I only want to listen to X Genre on my way." and supplies dynamic results
+- Allows user to export their final results to a PDF for printing
 
 ### Developer
 Chase Schachenman is a Computer Science major at University of Wisconsin-Madison. For questions about Chase or Roadio, please contact <chaseshak@gmail.com>.
