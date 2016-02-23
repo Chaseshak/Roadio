@@ -1,6 +1,6 @@
 
 <footer>
-    <div class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 10px">
+    <div class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 10px; margin-top: 60px;">
         <div class="container">
             <div class="navbar-collapse collapse" id="footer-body">
                 <ul class="nav navbar-nav">
@@ -18,7 +18,6 @@
 <!-- Modal Privacy Policy -->
 <div id="privacyPolicy" class="modal fade" role="dialog">
     <div class="modal-dialog" style="width: 60%">
-
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">

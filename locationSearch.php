@@ -1,4 +1,10 @@
-<?php include "templates/include/header.php"; ?>
+<?php include "templates/include/header.php";
+
+/**
+ * Adds website to temp DB pending approval.
+ */
+
+?>
 
 <!-- Links in the styling for displaying website result "cards" -->
 <link rel="stylesheet" href="CSS/locationSearch.css">
@@ -68,7 +74,6 @@
                     <h4 class="modal-title" id="addSiteModal"></h4>
                 </div>
                 <div class="modal-body">
-                    <form role="form">
                         <div class="form-group">
                             <label for="callsignForm">Callsign</label>
                             <input type="text" class="form-control" id ="callsignForm" readonly>
@@ -77,7 +82,7 @@
                             <label for="website">Website URL</label>
                             <input type="url" class="form-control" id="website">
                         </div>
-                    </form>
+                    <h5><strong>Thanks for helping make this site more complete!</strong></h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
@@ -101,8 +106,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

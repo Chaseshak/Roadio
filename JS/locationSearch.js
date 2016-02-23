@@ -76,6 +76,7 @@ function createFilters(){
 
     }
 }
+
 function passToWebsiteModal(id){
     var title = document.getElementById("addSiteModal");
     title.innerHTML = "Add website for " + id;

@@ -44,7 +44,6 @@ function locationSearch($location){
     (latitude BETWEEN $lowerLat AND $upperLat) AND
     (longitude BETWEEN $lowerLong AND $upperLong)";
     $result = $conn->query($sql);
-    $results = array();
 
     // Store all possible station class ranges
     $class_A = 17.6;
