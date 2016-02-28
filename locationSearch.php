@@ -26,7 +26,7 @@
             <div class="panel-heading">
                 <ul class="list-inline">
                     <li style="padding-top: 8px;"> <h3 style="display: inline;">Filter Results</h3> </li>
-                    <li style="padding-top: 6px;"><button type="submit" class="btn btn-success">Update Filters</button></li>
+                    <li style="padding-top: 6px;"><button type="submit" class="btn btn-success" onclick="populateSearchResults()">Update Filters</button></li>
                 </ul>
             </div>
             <!-- Filters for genre container (Dynamically populated) -->

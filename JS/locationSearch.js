@@ -1,15 +1,17 @@
 $('#lower-nav').affix({
     offset: {top: 0}
 });
-
+var results = [];
 window.onload = function(){
-    var results = loadResults();
+    results = loadResults();
     createFilters();
     filters = [];
-    populateSearchResults(results, filters);
+    populateSearchResults();
 };
 
 var possibleGenres = [];
+var totalFilters = 0;
+var currFilters = [];
 
 function loadResults() {
     var results = [];
@@ -25,28 +27,6 @@ function loadResults() {
     // sort the possible genres array
     possibleGenres.sort();
     return results;
-}
-
-function createRow(index, toPrint){
-    // create the row
-    var rowDiv = document.createElement("div");
-    rowDiv.className = "row";
-    rowDiv.id = index;
-    // create the column
-    colDiv = document.createElement("div");
-    colDiv.className = "col-md-12";
-    colDiv.id = index;
-    //colDiv.innerHTML = toPrint;
-    // create the search result container
-    var resultContainer = document.createElement("div");
-    resultContainer.className = "display-container";
-    resultContainer.style = "color: black";
-    resultContainer.innerHTML = toPrint;
-    // append elems.
-    colDiv.appendChild(resultContainer);
-    rowDiv.appendChild(colDiv);
-    var container = document.getElementById("container");
-    container.appendChild(rowDiv);
 }
 
 function createFilters(){
@@ -66,6 +46,7 @@ function createFilters(){
         // create the label
         var label = document.createElement("label");
         label.htmlFor = "checkbox" + i;
+        label.id = "lbl" + i;
         label.innerHTML = possibleGenres[i];
 
         divContain.appendChild(checkbox);
@@ -73,7 +54,17 @@ function createFilters(){
 
         // finally append to container list
         containerList.appendChild(divContain);
+        totalFilters++;
+    }
+}
 
+function getFilters(){
+    for(i = 0; i < totalFilters; i++){ // go through all possible filters
+        var checkbox = document.getElementById("checkbox" + i);
+        var lbl = document.getElementById("lbl"+i);
+        if(checkbox.checked){
+            currFilters.push(lbl.innerHTML); // if is checked, add to currFilters list
+        }
     }
 }
 
@@ -108,8 +99,8 @@ function passToRangeMapModal(data){
     var lngi = parseFloat(dataArr[8]);
     var myLatLng = {lat: lati, lng: lngi};
     var urlKML = "https://transition.fcc.gov/fcc-bin/contourplot.kml?appid=" + dataArr[1] +
-            "&call=" + dataArr[0] + "&freq=" + dataArr[2] + "&contour=60&city=" +
-            dataArr[3] + "&state=" + dataArr[4] + "&.kml";
+        "&call=" + dataArr[0] + "&freq=" + dataArr[2] + "&contour=60&city=" +
+        dataArr[3] + "&state=" + dataArr[4] + "&.kml";
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -124,13 +115,13 @@ function passToRangeMapModal(data){
         });
 
         var marker = new google.maps.Marker({
-           position: myLatLng,
+            position: myLatLng,
             map: map,
-           title: 'Your Entered Location'
+            title: 'Your Entered Location'
         });
 
         marker.addListener('click', function(){
-           infoWindow.open(map, marker);
+            infoWindow.open(map, marker);
         });
 
         var ctaLayer = new google.maps.KmlLayer({
@@ -139,173 +130,190 @@ function passToRangeMapModal(data){
         });
     }
 
+
+    // on button click for range doc, trigger modal
     $("#rangeDoc").on("shown.bs.modal", function(e) {
         // Trigger map on modal load
         initMap();
     });
 }
 
-function populateSearchResults(results, filters){
-    // if no filters, display all results
+function populateSearchResults(){
 
-    if(filters.length == 0) {
+    getFilters();
 
-        for(i = 0; i < results.length; i++){
-
-
-            if(results[i]['callsign'].length != 0){ // make sure good data
-                // create row
-                var row = document.createElement("div");
-                row.className = "row";
-
-                // create first column
-                var iconDiv = document.createElement("div");
-                iconDiv.className = "hidden-xs col-sm-3";
-                iconDiv.style="padding: 0;";
-
-                var iconTag = document.createElement("img");
-                iconTag.src = "Resources/radioIcon.png";
-                iconTag.style = "max-height:140px; max-width: 134px;";
-
-                // add img tag to iconDiv and then add to row
-                iconDiv.appendChild(iconTag);
-                row.appendChild(iconDiv);
-
-               // create second column
-                var col2 = document.createElement("div");
-                col2.className = "col-xs-4 col-sm-3";
-                col2.style = "padding: 0";
-
-                // create ul
-                var ul1 = document.createElement("ul");
-                ul1.className = "list-group";
-
-                // create li item callsign
-                var liCall = document.createElement("li");
-                liCall.className = "list-group-item clearfix";
-                var callsign = document.createElement("h4");
-                callsign.className = "pull-left";
-                callsign.innerHTML = "<strong>" + results[i]['callsign'] + "</strong>";
-                // create li item location
-                var liLocation = document.createElement("li");
-                liLocation.className = "list-group-item clearfix";
-                var location = document.createElement("h5");
-                location.className = "pull-left";
-                var city = results[i]['city'].toLocaleLowerCase();
-                city = city.replace("_", " ");
-                city = capitalizeFirstLetter(city);
-                location.innerHTML = city + ", " + results[i]['state'];
-
-                // create 3rd column
-                var col3 = document.createElement("div");
-                col3.className = "col-xs-4 col-sm-3";
-                col3.style = "padding: 0";
-
-                // create ul list
-                var ul2 = document.createElement("ul");
-                ul2.className = "list-group";
-
-                // create li item Genre
-                var liGenre = document.createElement("li");
-                liGenre.className = "list-group-item clearfix";
-                var genre = document.createElement("h4");
-                genre.className = "pull-left";
-                genre.innerHTML = "<strong>" + results[i]['primaryGenre'] + "</strong>";
-                // create li item website
-                // check if website found
-                var liSite = document.createElement("li");
-                liSite.className = "list-group-item clearfix";
-                var webContain = document.createElement("h5");
-                webContain.className = "pull-left";
-                var website = document.createElement("a");
-                website.id = results[i]['callsign'];
-
-                // handle case where no website found
-                if(results[i]['website'] == null){
-                    website.href="#noSite";
-                    website.innerHTML = "No site, add one!";
-                    website.setAttribute("data-toggle", "modal");
-                    website.setAttribute("onclick", "passToWebsiteModal(\"" + results[i]['callsign'] + "\");");
-                    website.target = "#noSite";
-                }
-                else{
-                    website.href = results[i]['website'];
-                    website.innerHTML = results[i]['callsign'] + "'s Website";
-                    website.target = "_blank";
-                }
-                webContain.appendChild(website);
-
-                // create 4th column
-                var col4 = document.createElement("div");
-                col4.className = "col-xs-4 col-sm-3";
-                col4.style="padding-right: 10px; padding-left:0px;";
-
-                // create ul list
-                var ul3 = document.createElement("ul");
-                ul3.className = "list-group";
-
-                // create li item freq
-                var liFreq = document.createElement("li");
-                liFreq.className = "list-group-item clearfix";
-                var freq = document.createElement("h4");
-                freq.className = "pull-left";
-                freq.innerHTML = "<strong>" + results[i]['frequency'] + "</strong>";
-                // create li item for range map
-                var liRangeMap = document.createElement("li");
-                liRangeMap.className = "list-group-item clearfix";
-                var rangeDocContain = document.createElement("h5");
-                rangeDocContain.className = "pull-left";
-                var rangeMap = document.createElement("a");
-                rangeMap.id = results[i]['callsign'] + "RangeDoc";
-                rangeMap.innerHTML = "Range Map";
-                rangeMap.href="#rangeDoc";
-                rangeMap.setAttribute("data-toggle", "modal");
-                rangeMap.setAttribute("onclick" , "passToRangeMapModal(\"" +
-                    results[i]['callsign'] + "," + results[i]['appId'] + "," + results[i]['frequency'] + "," +
-                    results[i]['city'] + "," + results[i]['state'] + ", " + results[i]['latitude'] + ", " + results[i]['longitude'] +
-                    ", " + results[i]['enteredLat'] + ", " +
-                    results[i]['enteredLng'] + ", " + results[i]['enteredLoc']
-                    + "\");");
-                rangeDocContain.appendChild(rangeMap);
-
-                // add all elements
-                liCall.appendChild(callsign);
-                liLocation.appendChild(location);
-                ul1.appendChild(liCall);
-                ul1.appendChild(liLocation);
-                col2.appendChild(ul1);
-
-                liGenre.appendChild(genre);
-                liSite.appendChild(webContain);
-                ul2.appendChild(liGenre);
-                ul2.appendChild(liSite);
-                col3.appendChild(ul2);
-
-                liFreq.appendChild(freq);
-                liRangeMap.appendChild(rangeDocContain);
-                ul3.appendChild(liFreq);
-                ul3.appendChild(liRangeMap);
-                col4.appendChild(ul3);
-
-                row.appendChild(col2);
-                row.appendChild(col3);
-                row.appendChild(col4);
-                // add row to container
-                var container = document.getElementById("containerResults");
-                container.appendChild(row);
-                // add hr
-                var hr = document.createElement("hr");
-                hr.className = "hr-location";
-                container.appendChild(hr);
-            }
+    if(currFilters.length < 1){
+        for(i = 0; i < results.length; i++) {
+            createResultRow(i);
         }
     }
-    // else display the appropriate filtered results
     else{
-
+        // clear the current results
+        var contain = document.getElementById("containerResults");
+        contain.innerHTML = "";
+        for(i = 0; i < results.length; i++) {
+            var include = false;
+            for(j = 0; j < currFilters.length; j++){
+                if(results[i]['primaryGenre'] == currFilters[j]){
+                    include = true;
+                }
+            }
+            if(include) {
+                createResultRow(i);
+            }
+        }
+        // after populating, clear the currFilters array
+        currFilters = [];
     }
 }
 
+function createResultRow(i){
+    if (results[i]['callsign'].length != 0) { // make sure good data
+        // create row
+        var row = document.createElement("div");
+        row.className = "row";
+
+        // create first column
+        var iconDiv = document.createElement("div");
+        iconDiv.className = "hidden-xs col-sm-3";
+        iconDiv.style = "padding: 0;";
+
+        var iconTag = document.createElement("img");
+        iconTag.src = "Resources/radioIcon.png";
+        iconTag.style = "max-height:140px; max-width: 134px;";
+
+        // add img tag to iconDiv and then add to row
+        iconDiv.appendChild(iconTag);
+        row.appendChild(iconDiv);
+
+        // create second column
+        var col2 = document.createElement("div");
+        col2.className = "col-xs-4 col-sm-3";
+        col2.style = "padding: 0";
+
+        // create ul
+        var ul1 = document.createElement("ul");
+        ul1.className = "list-group";
+
+        // create li item callsign
+        var liCall = document.createElement("li");
+        liCall.className = "list-group-item clearfix";
+        var callsign = document.createElement("h4");
+        callsign.className = "pull-left";
+        callsign.innerHTML = "<strong>" + results[i]['callsign'] + "</strong>";
+        // create li item location
+        var liLocation = document.createElement("li");
+        liLocation.className = "list-group-item clearfix";
+        var location = document.createElement("h5");
+        location.className = "pull-left";
+        var city = results[i]['city'].toLocaleLowerCase();
+        city = city.replace("_", " ");
+        city = capitalizeFirstLetter(city);
+        location.innerHTML = city + ", " + results[i]['state'];
+
+        // create 3rd column
+        var col3 = document.createElement("div");
+        col3.className = "col-xs-4 col-sm-3";
+        col3.style = "padding: 0";
+
+        // create ul list
+        var ul2 = document.createElement("ul");
+        ul2.className = "list-group";
+
+        // create li item Genre
+        var liGenre = document.createElement("li");
+        liGenre.className = "list-group-item clearfix";
+        var genre = document.createElement("h4");
+        genre.className = "pull-left";
+        genre.innerHTML = "<strong>" + results[i]['primaryGenre'] + "</strong>";
+        // create li item website
+        // check if website found
+        var liSite = document.createElement("li");
+        liSite.className = "list-group-item clearfix";
+        var webContain = document.createElement("h5");
+        webContain.className = "pull-left";
+        var website = document.createElement("a");
+        website.id = results[i]['callsign'];
+
+        // handle case where no website found
+        if (results[i]['website'] == null) {
+            website.href = "#noSite";
+            website.innerHTML = "No site, add one!";
+            website.setAttribute("data-toggle", "modal");
+            website.setAttribute("onclick", "passToWebsiteModal(\"" + results[i]['callsign'] + "\");");
+            website.target = "#noSite";
+        }
+        else {
+            website.href = results[i]['website'];
+            website.innerHTML = results[i]['callsign'] + "'s Website";
+            website.target = "_blank";
+        }
+        webContain.appendChild(website);
+
+        // create 4th column
+        var col4 = document.createElement("div");
+        col4.className = "col-xs-4 col-sm-3";
+        col4.style = "padding-right: 10px; padding-left:0px;";
+
+        // create ul list
+        var ul3 = document.createElement("ul");
+        ul3.className = "list-group";
+
+        // create li item freq
+        var liFreq = document.createElement("li");
+        liFreq.className = "list-group-item clearfix";
+        var freq = document.createElement("h4");
+        freq.className = "pull-left";
+        freq.innerHTML = "<strong>" + results[i]['frequency'] + "</strong>";
+        // create li item for range map
+        var liRangeMap = document.createElement("li");
+        liRangeMap.className = "list-group-item clearfix";
+        var rangeDocContain = document.createElement("h5");
+        rangeDocContain.className = "pull-left";
+        var rangeMap = document.createElement("a");
+        rangeMap.id = results[i]['callsign'] + "RangeDoc";
+        rangeMap.innerHTML = "Range Map";
+        rangeMap.href = "#rangeDoc";
+        rangeMap.setAttribute("data-toggle", "modal");
+        rangeMap.setAttribute("onclick", "passToRangeMapModal(\"" +
+            results[i]['callsign'] + "," + results[i]['appId'] + "," + results[i]['frequency'] + "," +
+            results[i]['city'] + "," + results[i]['state'] + ", " + results[i]['latitude'] + ", " + results[i]['longitude'] +
+            ", " + results[i]['enteredLat'] + ", " +
+            results[i]['enteredLng'] + ", " + results[i]['enteredLoc']
+            + "\");");
+        rangeDocContain.appendChild(rangeMap);
+
+        // add all elements
+        liCall.appendChild(callsign);
+        liLocation.appendChild(location);
+        ul1.appendChild(liCall);
+        ul1.appendChild(liLocation);
+        col2.appendChild(ul1);
+
+        liGenre.appendChild(genre);
+        liSite.appendChild(webContain);
+        ul2.appendChild(liGenre);
+        ul2.appendChild(liSite);
+        col3.appendChild(ul2);
+
+        liFreq.appendChild(freq);
+        liRangeMap.appendChild(rangeDocContain);
+        ul3.appendChild(liFreq);
+        ul3.appendChild(liRangeMap);
+        col4.appendChild(ul3);
+
+        row.appendChild(col2);
+        row.appendChild(col3);
+        row.appendChild(col4);
+        // add row to container
+        var container = document.getElementById("containerResults");
+        container.appendChild(row);
+        // add hr
+        var hr = document.createElement("hr");
+        hr.className = "hr-location";
+        container.appendChild(hr);
+    }
+}
 
 
 function capitalizeFirstLetter(string){
