@@ -64,6 +64,7 @@ function getFilters(){
         var lbl = document.getElementById("lbl"+i);
         if(checkbox.checked){
             currFilters.push(lbl.innerHTML); // if is checked, add to currFilters list
+            anyChecked = true;
         }
     }
 }
@@ -130,22 +131,20 @@ function passToRangeMapModal(data){
         });
     }
 
-
     // on button click for range doc, trigger modal
     $("#rangeDoc").on("shown.bs.modal", function(e) {
         // Trigger map on modal load
         initMap();
     });
 }
-
+var firstRun = true;
 function populateSearchResults(){
 
-    getFilters();
-
     if(currFilters.length < 1){
-        for(i = 0; i < results.length; i++) {
+        for(i = 0; i < results.length && firstRun; i++) {
             createResultRow(i);
         }
+        firstRun = false;
     }
     else{
         // clear the current results

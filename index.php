@@ -44,7 +44,10 @@ function locationSearch($location){
     (latitude BETWEEN $lowerLat AND $upperLat) AND
     (longitude BETWEEN $lowerLong AND $upperLong)";
     $result = $conn->query($sql);
-
+    //SELECT * FROM fmstations WHERE (latitude BETWEEN 43 AND 44) AND (longitude BETWEEN -90 AND -89) UNION SELECT * FROM amstations WHERE (latitude BETWEEN 43 AND 44) AND (longitude BETWEEN -90 AND -89)
+    //TODO above is for getting AM AND FM stations.
+    //TODO above query moves the genre of the AM stations over into another column to match column space.
+    // AM Stations start their freq at 500 hz, check if is am based off of that.
     // Store all possible station class ranges
     $class_A = 17.6;
     $class_C3 = 24.3;

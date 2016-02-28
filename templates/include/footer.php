@@ -1,6 +1,6 @@
 
 <footer>
-    <div class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 10px; margin-top: 60px;">
+    <div class="navbar navbar-inverse navbar-bottom" style="font-size: 10px; margin-top: 50px; margin-bottom: 0; border-radius: 0">
         <div class="container">
             <div class="navbar-collapse collapse" id="footer-body">
                 <ul class="nav navbar-nav">
