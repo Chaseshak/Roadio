@@ -2,8 +2,10 @@ $('#lower-nav').affix({
     offset: {top: 0}
 });
 var results = [];
+var fullSizeResult = 0;
 window.onload = function(){
     results = loadResults();
+    fullSizeResults = results.length;
     createFilters();
     filters = [];
     populateSearchResults();
@@ -12,6 +14,7 @@ window.onload = function(){
 var possibleGenres = [];
 var totalFilters = 0;
 var currFilters = [];
+
 
 function loadResults() {
     var results = [];
@@ -59,6 +62,7 @@ function createFilters(){
 }
 
 function getFilters(){
+    currFilters = [];
     for(i = 0; i < totalFilters; i++){ // go through all possible filters
         var checkbox = document.getElementById("checkbox" + i);
         var lbl = document.getElementById("lbl"+i);
@@ -140,9 +144,16 @@ function passToRangeMapModal(data){
 var firstRun = true;
 function populateSearchResults(){
 
-    if(currFilters.length < 1){
-        for(i = 0; i < results.length && firstRun; i++) {
+    getFilters();
+    if(firstRun){
+        for(i = 0; i < results.length; i++){
             createResultRow(i);
+        }
+    }
+    alert("First run: " + firstRun);
+    if(currFilters.length < 1){
+        for(i = 0; i < results.length && !firstRun; i++) {
+            if(fullSizeResults != results.length) createResultRow(i);
         }
         firstRun = false;
     }
@@ -161,8 +172,6 @@ function populateSearchResults(){
                 createResultRow(i);
             }
         }
-        // after populating, clear the currFilters array
-        currFilters = [];
     }
 }
 
