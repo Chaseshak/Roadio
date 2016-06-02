@@ -16,6 +16,8 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Google maps library -->
     <script src="https://maps.google.com/maps/api/js"></script>
+    <!-- Some extra styling for social media buttons -->
+    <link rel="stylesheet" href="CSS/social-sharing.css">
 
 
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
