@@ -1,8 +1,8 @@
 <?php include "templates/include/header.php" ?>
     <script src="JS/home.js"></script>
-<div class="container" style="padding-top: 60px;">
-<div class="jumbotron" style="background-color: #B7B7B6">
-    Hello, World!
+<div class="container" style="padding-top: 60px; background-color: #FDF3E7;">
+<div class="page-header">
+    <h1>Roadio  <small>Find Radio Stations near and along your driving route</small></h1>
 </div>
 
 <div class="row">
@@ -12,7 +12,7 @@
         </p>
     </div>
     <div class="col-md-8">
-        <div id="map" style="height: 400px;">
+        <div id="map">
         </div>
     </div>
 </div>

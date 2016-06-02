@@ -22,7 +22,7 @@
     <title><?php echo $_POST['title'] ?></title>
 </head>
 
-<body style="font-family: 'Montserrat', sans-serif; background-color: #686766">
+<body style="font-family: 'Montserrat', sans-serif; background-color: #C63D0F">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container" style="padding-left:15px; padding-right: 15px; padding-top: 0;">

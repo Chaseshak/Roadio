@@ -1,14 +1,12 @@
 
 <footer>
-    <div class="navbar navbar-inverse navbar-bottom" style="font-size: 10px; margin-top: 50px; margin-bottom: 0; border-radius: 0">
+    <div class="navbar navbar-inverse navbar-bottom" style="font-size: 10px; margin-top: 10px; margin-bottom: 0; border-radius: 0">
         <div class="container">
             <div class="navbar-collapse collapse" id="footer-body">
                 <ul class="nav navbar-nav">
                     <li><a href="#">About Roadio</a></li>
                     <li><a href="mailto:roadio@gmail.com?Subject=Roadio%20Contact">Contact Us</a></li>
                     <li><a href="#">Submit a Bug</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <li><a href="#submitFeedback" data-toggle="modal" target="#submitFeedback">Terms &amp; Conditions</a></li>
                     <li><a href="#privacyPolicy" data-toggle="modal" target="#privacyPolicy">Privacy Policy</a></li>
                 </ul>
             </div>
