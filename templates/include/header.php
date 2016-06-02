@@ -25,7 +25,7 @@
 <body style="font-family: 'Montserrat', sans-serif; background-color: #C63D0F">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container" style="padding-left:15px; padding-right: 15px; padding-top: 0;">
+    <div class="container" style="padding-left:15px; padding-right: 15px; padding-top: 0;3">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navTop">
                 <span class="sr-only">Toggle navigation</span>
@@ -33,16 +33,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="." >Roadio</a>
+            <a class="navbar-brand" href="." style="color: #FDF3E7">Roadio</a>
         </div>
         <div class="navbar-collapse collapse" id="navTop">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">About</a>
+                    <a href="#" style="color: #FDF3E7">About</a>
                 </li>
             </ul>
             <form class="navbar-search pull-right form-inline" method="get" role="search" name="locationForm" id="locationForm" action="./?index.php">
-                <div style="color: #ffffff; margin-top: 10px;">
+                <div style="color: #FDF3E7; margin-top: 10px;">
                     Search Within Range of:
                     <?php
                         if(isset($_GET['locationSearch'])) {
