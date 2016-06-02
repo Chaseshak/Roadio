@@ -150,7 +150,6 @@ function populateSearchResults(){
             createResultRow(i);
         }
     }
-    alert("First run: " + firstRun);
     if(currFilters.length < 1){
         for(i = 0; i < results.length && !firstRun; i++) {
             if(fullSizeResults != results.length) createResultRow(i);
