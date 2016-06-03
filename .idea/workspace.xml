@@ -2,14 +2,16 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/config.php" line="8" />
-    <bookmark url="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css" line="4530" />
+    <bookmark url="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css" line="4539" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff404748-83b5-4ace-911f-e427d8ea7a9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/social-sharing.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/colorPalette.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorPallette.PNG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/Bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/home.css" afterPath="$PROJECT_DIR$/CSS/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/header.php" afterPath="$PROJECT_DIR$/templates/include/header.php" />
     </list>
     <ignored path="Roadio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +49,7 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/include/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="-449">
               <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -75,8 +77,8 @@
       <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="4356" column="27" selection-start-line="4356" selection-start-column="27" selection-end-line="4356" selection-end-column="27" />
+            <state relative-caret-position="144">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -85,8 +87,8 @@
       <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSS/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -95,12 +97,24 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="144">
+              <caret line="17" column="137" selection-start-line="17" selection-start-column="137" selection-end-line="17" selection-end-column="137" />
               <folding>
                 <element signature="e#240#293#0#HTML" expanded="true" />
+                <element signature="e#320#346#0#HTML" expanded="true" />
                 <element signature="e#356#410#0#HTML" expanded="true" />
+                <element signature="e#2320#2342#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colorPalette.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/colorPalette.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,11 +175,12 @@
         <option value="$PROJECT_DIR$/JS/locationSearch.js" />
         <option value="$PROJECT_DIR$/modifyTable.php" />
         <option value="$PROJECT_DIR$/templates/include/footer.php" />
-        <option value="$PROJECT_DIR$/Bootstrap/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/CSS/home.css" />
         <option value="$PROJECT_DIR$/JS/test.js" />
         <option value="$PROJECT_DIR$/CSS/social-sharing.css" />
         <option value="$PROJECT_DIR$/templates/include/header.php" />
+        <option value="$PROJECT_DIR$/Bootstrap/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/Resources/colorPalette.txt" />
+        <option value="$PROJECT_DIR$/CSS/home.css" />
         <option value="$PROJECT_DIR$/home.php" />
       </list>
     </option>
@@ -239,25 +254,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Roadio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Roadio" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSS" />
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,15 +289,16 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Roadio\Resources" />
-      <recent name="C:\xampp\htdocs\Roadio" />
-      <recent name="C:\xampp\htdocs\Roadio\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Roadio\Roadio\Resources" />
       <recent name="C:\xampp\htdocs\Roadio\Roadio\templates\include" />
       <recent name="C:\xampp\htdocs\Roadio\Resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources" />
+      <recent name="C:\xampp\htdocs\Roadio\Resources" />
+      <recent name="C:\xampp\htdocs\Roadio" />
+      <recent name="C:\xampp\htdocs\Roadio\templates" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.FM_Station.php">
@@ -360,7 +358,7 @@
       <option name="presentableId" value="Default" />
       <updated>1455159524904</updated>
       <workItem from="1464876580600" duration="1645000" />
-      <workItem from="1464887083611" duration="4940000" />
+      <workItem from="1464887083611" duration="6667000" />
     </task>
     <task id="LOCAL-00001" summary="Navbar progress&#10;">
       <created>1455165090494</created>
@@ -600,11 +598,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464909787989</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added social media buttons and changed header font.">
+      <created>1464911071518</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1464911071518</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6585000" />
+    <option name="totallyTimeSpent" value="8312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -664,7 +669,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Committing KML Files almost 19000 stations." />
     <MESSAGE value="Uncommitted Files" />
     <MESSAGE value="Completed Query for stations based on range. Results Posted to Location Search php page. Need to sort based on distance." />
     <MESSAGE value="Changed mi -&gt; Miles in dropdown menu on navbar" />
@@ -689,7 +693,8 @@
     <MESSAGE value="Made temp file to modify DBs" />
     <MESSAGE value="Changed around header and footer styling. Changed home color pallete." />
     <MESSAGE value="Changed home page styling and added some elements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed home page styling and added some elements." />
+    <MESSAGE value="Added social media buttons and changed header font." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added social media buttons and changed header font." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -698,16 +703,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <marker date="1464875700079" expanded="true" signature="1213:1348" ph="SELECT * FRO... fmstations" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -721,7 +716,9 @@
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding>
             <element signature="e#240#293#0#HTML" expanded="true" />
+            <element signature="e#320#346#0#HTML" expanded="true" />
             <element signature="e#356#410#0#HTML" expanded="true" />
+            <element signature="e#2320#2342#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -797,7 +794,9 @@
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding>
             <element signature="e#240#293#0#HTML" expanded="true" />
+            <element signature="e#320#346#0#HTML" expanded="true" />
             <element signature="e#356#410#0#HTML" expanded="true" />
+            <element signature="e#2320#2342#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1005,14 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="4356" column="27" selection-start-line="4356" selection-start-column="27" selection-end-line="4356" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/AM_Station.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1049,14 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS/social-sharing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1067,7 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/include/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="-449">
           <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1079,13 +1062,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/colorPalette.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="144">
+          <caret line="17" column="137" selection-start-line="17" selection-start-column="137" selection-end-line="17" selection-end-column="137" />
           <folding>
             <element signature="e#240#293#0#HTML" expanded="true" />
+            <element signature="e#320#346#0#HTML" expanded="true" />
             <element signature="e#356#410#0#HTML" expanded="true" />
+            <element signature="e#2320#2342#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

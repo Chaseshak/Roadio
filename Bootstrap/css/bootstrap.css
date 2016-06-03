@@ -4,6 +4,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/** Developer added css **/
+.center{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/** Start Bootstrap standard library **/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html {
   font-family: 'Montserrat', sans-serif;

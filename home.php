@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12 section-box">
                             <h3>
-                                Search by Location<a href="http://www.google.com" target="_blank"><span class="glyphicon glyphicon-new-window pull-right">
+                                Search by Location<a href="http://www.google.com" target="_blank"><span class="glyphicon glyphicon-search pull-right">
                                 </span></a>
                             </h3>
                             <p>
@@ -33,7 +33,7 @@
                                 </span></a>
                             </h3>
                             <p>
-                                Design elements, playground and code snippets for Bootstrap HTML/CSS/JS framework</p>
+                                Enter your start and end location and get radio stations along your route that you want to listen to!</p>
                         </div>
                     </div>
                 </div>
@@ -44,6 +44,7 @@
                         <div class="col-xs-12 col-md-12 section-box">
                             <h3>
                                 Share on Social Media
+                                <span class="glyphicon glyphicon-share-alt pull-right" style="color: #337AB7"></span>
                             </h3>
                             <p>
 
