@@ -51,8 +51,13 @@
                                 If you love our application, help us spread the word by sharing our page on social media!
                             </p>
                             <!-- Social Media buttons -->
-                            <a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                            <a rel="canonical" href="https://twitter.com/share?url=http://www.google.com&text=Check out Roadio!" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                            <a href="https://www.facebook.com/dialog/feed?
+                                          app_id=169879278202
+                                          &display=popup&caption=An%20example%20caption
+                                          &link=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fdialogs%2F
+                                          &redirect_uri=https://developers.facebook.com/tools/explorer"
+                               title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
                             <a href="https://plus.google.com/share?url=" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
                         </div>
                     </div>
