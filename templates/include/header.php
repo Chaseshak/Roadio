@@ -49,7 +49,7 @@
                     <?php
                         if(isset($_GET['locationSearch'])) {
                             ?>
-                                <input value ="<?php echo $_GET['locationSearch']?>" type="text" class="form-control" id="locationSearch"  name="locationSearch" required>
+                                <input data-toggle="tooltip" value ="<?php echo $_GET['locationSearch']?>" type="text" class="form-control" id="locationSearch"  name="locationSearch" required>
                             <?php
                         } else{
 

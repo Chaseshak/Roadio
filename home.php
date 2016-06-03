@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12 section-box">
                             <h3>
-                                Search by Location<a href="http://www.google.com" target="_blank"><span class="glyphicon glyphicon-search pull-right">
+                                Search by Location<a id="locationSearchIcon" href="#"><span class="glyphicon glyphicon-search pull-right">
                                 </span></a>
                             </h3>
                             <p>
